@@ -18,3 +18,6 @@ tamil_nadu = india.filter(ee.Filter.eq('ADM1_NAME', 'Tamil Nadu'))
 tn_count = tamil_nadu.size().getInfo()
 print(f"✅ Tamil Nadu districts: {tn_count}")
 print("🛰️  Satellite pipeline ready!")
+# Save to CSV
+df.to_csv('data/processed/tn_ndvi_jan2023.csv', index=False)
+print("✅ Saved to data/processed/tn_ndvi_jan2023.csv")
